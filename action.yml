@@ -10,6 +10,7 @@ inputs:
   flow-task-options:
     description: 'Task options passed to the flow (ex -o __task__option value)'
     required: false
+    defautl: ''
 runs:
   using: "composite"
   steps:
