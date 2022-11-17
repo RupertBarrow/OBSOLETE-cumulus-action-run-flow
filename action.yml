@@ -8,7 +8,7 @@ inputs:
     description: 'Name of the Cumulus flow to execute'
     required: true
   flow-task-options:
-    description: 'Task options passed to the flow (ex \'-o __task__option value\')'
+    description: 'Task options passed to the flow (ex -o __task__option value)'
     required: false
 runs:
   using: "composite"
