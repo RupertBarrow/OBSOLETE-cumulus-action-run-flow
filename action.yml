@@ -10,13 +10,17 @@ inputs:
   flow-task-options:
     description: 'Task options passed to the flow (ex -o __task__option value)'
     required: false
-    defautl: ''
+    default: ''
+secrets:
+  cumulusci-service-github:
+    description: 'Value for CUMULUSCI_SERVICE_github'
+    required: true
 runs:
   using: "composite"
   steps:
     - name: Run Flow (with options)
+      shell: bash
       env:
-        CUMULUSCI_SERVICE_github: ${{ secrets.CUMULUSCI_SERVICE_GITHUB }}
+        CUMULUSCI_SERVICE_github: ${{ secrets.cumulusci-service-github }}
       run: |
         env && cci flow run ${{ inputs.flow-name }} --org ${{ inputs.org-name }} ${{ inputs.flow-task-options }} | tee cumulusci-flow.log
-      shell: bash
