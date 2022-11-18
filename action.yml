@@ -11,7 +11,6 @@ inputs:
     description: 'Task options passed to the flow (ex -o __task__option value)'
     required: false
     default: ''
-secrets:
   cumulusci-service-github:
     description: 'Value for CUMULUSCI_SERVICE_github'
     required: true
