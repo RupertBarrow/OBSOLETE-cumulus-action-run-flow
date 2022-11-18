@@ -18,5 +18,5 @@ runs:
       env:
         CUMULUSCI_SERVICE_github: '{"username": "${{ github.actor }}", "token": "${{ github.token }}", "email": "cci@github.actions" }'
       run: |
-        cci flow run ${{ inputs.flow-name }} --org ${{ inputs.org-name }} ${{ inputs.flow-task-options }} | tee cumulusci-flow.log
+        env && cci flow run ${{ inputs.flow-name }} --org ${{ inputs.org-name }} ${{ inputs.flow-task-options }} | tee cumulusci-flow.log
       shell: bash
