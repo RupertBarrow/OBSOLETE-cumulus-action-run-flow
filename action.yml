@@ -22,4 +22,4 @@ runs:
       env:
         CUMULUSCI_SERVICE_github: ${{ inputs.cumulusci-service-github }}
       run: |
-        env && cci flow run ${{ inputs.flow-name }} --org ${{ inputs.org-name }} ${{ inputs.flow-task-options }} | tee cumulusci-flow.log
+        cci flow run ${{ inputs.flow-name }} --org ${{ inputs.org-name }} ${{ inputs.flow-task-options }} | tee cumulusci-flow.log
